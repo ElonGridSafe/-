@@ -188,7 +188,9 @@ footer{
 .side_bar{
     position:fixed;
     bottom:5rem;
-    right:2.5rem;
+    right:-300px;
+    transition: all 1s linear;
+    z-index:10;
 }
 .side_bar li{
     width:8rem;

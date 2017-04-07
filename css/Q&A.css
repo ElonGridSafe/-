@@ -194,7 +194,7 @@ form div input,.feedback textarea{
     padding-left:20px;
 }
 .uname input{
-    margin-left:30px;
+    margin-left:1.66rem;
 }
 form div.feedback{
     align-items: flex-start;
@@ -206,32 +206,32 @@ form div.feedback{
     padding:10px 20px;
 }
 .vertify input{
-    width:30.2rem;
+    width:30.4rem;
     padding:0;
 }
 .vertify a.vertify_pic{
     background: #6495D7;
     color:#fff;
-    padding:5px 20px;
+    padding:0.3rem 1.3rem;
     border-radius:10px;
-    margin-left:10px;
+    margin-left:0.5rem
 }
 .vertify a.freshBtn{
-    margin-left:10px;
-    padding:5px 4px;
+    margin-left:0.5rem;
+    padding:0.3rem 0.5rem;
     border-radius:10px;
     color:#6495D7;
     background: #eee;
 }
 .option input[type=submit]{
-    width:30.2rem;
+    width:30.4rem;
     padding:0;
     color:#fff;
     background: #c13229;
 }
 .option input[type=reset]{
     width:9.1rem;
-    margin-left:10px;
+    margin-left:0.5rem;
     padding:0;
     color:#aaa;
     border:1px solid #eee;
@@ -273,12 +273,13 @@ footer{
     margin-bottom:2rem;
 }
 
-
 /*常驻条*/
 .side_bar{
     position:fixed;
     bottom:5rem;
-    right:2.5rem;
+    right:-300px;
+    transition: all 1s linear;
+    z-index:10;
 }
 .side_bar li{
     width:8rem;

@@ -121,7 +121,7 @@ form.sign_up div{
     margin-right:20px;
 }
 .uname label,.pwd label{
-    margin-right:3rem;
+    margin-right:2rem;
     font-size:1rem;
 }
 .uname input,.pwd input{
@@ -187,6 +187,9 @@ form.sign_up div{
     align-items: center;
     justify-content:flex-start;
 }
+.advantage ul li:hover h3,.advantage ul li:hover p{
+    color:#c13229;
+}
 .advantage ul li img{
     margin-bottom:4.5rem;
 }
@@ -219,11 +222,14 @@ form.sign_up div{
     position: relative;
     margin-bottom: -0.63rem;
 }
+.function_detail ul li.current .topic{
+    background:rgba(193,50,41,.9);
+}
 .function_detail ul li .topic{
     position: absolute;
     top:0;
     right:0;
-    bottom:0;
+    bottom:8px;
     left:0;
     background: rgba(255,255,255,.5);
     display: flex;
@@ -237,23 +243,26 @@ form.sign_up div{
 .function_detail ul li .topic span{
     color:#333;
 }
+.function_detail ul li.current .topic span{
+    color:#fff;
+}
 .function_intro{
     flex-basis: 74%;
     position: relative;
 }
-.function_intro .discribe{
+.function_intro .describe{
     position: absolute;
     right:65px;
     top:150px;
     width:33.3rem;
 }
-.function_intro .discribe h2{
+.function_intro .describe h2{
     color:#fff;
     font-size:2.6rem;
     font-weight: bold;
     margin-bottom: 52px;
 }
-.function_intro .discribe p{
+.function_intro .describe p{
     font-size:1.33rem;
     line-height:2.5rem;
     color:#fff;
@@ -268,38 +277,86 @@ form.sign_up div{
     flex-basis: 33.3%;
     text-align: center;
 }
-.feature ul li div {
+.feature ul li div{
     width: 24rem;
     height: 32rem;
     margin:0 auto;
     border:1px solid #333;
     border-radius:0.5rem;
-    padding-top:7.2rem;
+    position:relative;
+    transition:all .2s linear;
+    background:transparent;
+}
+.feature ul li div:hover{
+    background:#c13229;
+    border:none;
 }
 .feature ul li div img{
     width:10rem;
-    margin-bottom:6rem;
+    margin-top:7rem;
+    margin-bottom:3rem;
+    transition:all .2s linear;
+}
+.feature ul li div:hover img{
+    margin-top:3rem;
+    margin-bottom:15rem;
+    width:6.1rem;
 }
 .feature ul li div p{
-    font-size: 1.33rem;
+    font-size: 1.1rem;
     color:#333;
+    transition:all .2s linear;
 }
+.feature ul li div:hover p{
+    color:#fff;
+}
+.feature ul li div p.intro_detail{
+    color:#fff;
+    opacity:0;
+    position: absolute;
+    top:50%;
+    width:80%;
+    font-size: 1.33rem;
+    display:inline-block;
+    text-align: center;
+    transform: translate(-50%,-50%);
+}
+.feature ul li div:hover p.intro_detail{
+    opacity:1;
+}
+
 /*客户案例*/
 .customer_detail{
-    display: flex;
     min-width:987px;
+    position: relative;
 }
-.customer_detail img{
-    width:26.7rem;
-    height:37.2rem;
-    flex-basis:25%;
+.customer_pic:after{
+    content: "";
+    display: block;
+    clear:both;
+}
+.customer_pic{
+    position: relative;
+    z-index: 2;
+}
+.customer_pic img{
+    /*position:absolute;*/
+    width:25%;
+    float:left;
+    transition:all .3s linear;
 }
 .customer_describe{
-    flex:75%;
-    height:37.2rem;
+    width:0;
+    position:absolute;
+    top:0;
+    left:25%;
+    z-index: 1;
+    height:100%;
     background:#c13229;
     padding:9rem 5.7rem;
     color:#fff;
+    transition:all .3s linear;
+    overflow: hidden;
 }
 .customer_describe h3{
     font-size: 1.33rem;
@@ -386,7 +443,9 @@ footer{
 .side_bar{
     position:fixed;
     bottom:5rem;
-    right:2.5rem;
+    right:-300px;
+    transition: all 1s linear;
+    z-index:10;
 }
 .side_bar li{
     width:8rem;
